@@ -1,0 +1,1203 @@
+@import url(https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css);
+
+@import 'https://fonts.googleapis.com/css?family=Abel|Bungee+Hairline|Cinzel|Poiret+One|Quicksand|Raleway';
+/*
+font-family: 'Poiret One', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Abel', sans-serif;
+font-family: 'Bungee Hairline', cursive;
+*/
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #151515;
+}
+/* Start: menu*/
+header {
+  background: #151515;
+  width: 100%;
+  left: 0;
+}
+
+#menuIcon {
+    height: 160px;
+}
+nav {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 5px 0;
+  overflow: hidden;
+}
+
+.logo-box {
+  float: left;
+  margin-left: 10px;
+}
+
+.logo {
+  margin: 0;
+  height: 180px;
+  text-align: center;
+}
+
+.ul-0 {
+  margin: 0;
+  margin-right: 25px;
+  padding-left: 0;
+  list-style: none;
+  float: right;
+  height: 70px;
+  line-height: 70px;
+  text-align:center;
+  
+}
+
+.a-logo {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  
+}
+
+.a-0 {
+  color: white;
+  text-transform: uppercase;
+  font-size:125%;
+  padding: 15px;
+  text-decoration-line: none;
+}
+
+.a-0:hover {
+    color: #868686;
+    text-decoration: none;
+}
+
+.li-0 {
+  display: inline-block;
+  margin-left: 25px;
+  transition: .5s linear;
+}
+
+.a-0:hover:after{
+  width: 100%;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        z-index: 100;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .ul-0 {
+        display: none;
+        position: fixed;
+        inset: 0 0 0 30%;
+        background: rgba(21, 21, 21, 0.95);
+        padding: min(30vh, 10rem) 2em;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .ul-0[data-visible="true"] {
+        display: flex;
+    }
+
+    .li-0 {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:574px) {
+  .logo-box {
+    float: none;
+    margin: 0 auto;
+  }
+  .ul-0 {
+    float: none;
+    margin: 0 25px;
+    }
+ .li-0:first-of-type {margin-left:0}
+}
+
+@media screen and (max-width:493px) {
+nav {
+  overflow: visible
+}
+.ul-0 {
+  height: auto;
+  padding-top: 30px;
+  line-height: 30px;
+}
+.li-0 {
+  display: block;
+  margin: 0;
+}
+}
+
+/* end of menu -> textBox*/
+.textBox {
+  height: 500px;
+  background-color: #151515;
+  background: url(./Assets/PalakPhoto.png) no-repeat center center; 
+  background-size:30rem;
+  background-position: 95%;
+  background-position-y: top;
+}
+
+ .Intro {
+  letter-spacing: 4px;
+  color: white;
+  padding: 0px 0px 0px 60px;
+  font-size: 320%;
+  max-width: 700px;
+  line-height: 50px;
+  font-weight: 100;
+}
+
+.World {
+    letter-spacing: 4px;
+    color: white;
+    padding: 0px 0px 0px 60px;
+    font-size: 150%;
+    max-width: 700px;
+    line-height: 50px;
+    font-weight: 100;
+}
+
+.Blob{
+    letter-spacing: 4px;
+    color: white;
+    padding: 0px 0px 0px 60px;
+    font-size: 100%;
+    max-width: 700px;
+    line-height: 50px;
+    font-weight: 100;
+}
+/* end of textBox-> heroBox*/
+
+#container-1 {
+    height: 10vh;
+    background-color: #151515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+#hello-world-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.letter-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+    color: #151515;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.letter-btn.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.letter-btn:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+}
+
+.space {
+    width: 30px;
+}
+
+.textBox {
+    min-height: 500px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    background-position: 95% 50%;
+}
+
+@media (max-width: 768px) {
+    .textBox {
+        background-position: center 20%;
+        padding-top: 60%;
+        text-align: center;
+    }
+
+    .Intro, .World, .Blob {
+        padding: 0;
+        font-size: 90%;
+    }
+}
+/* Social Buttons in Container 1 */
+#container-1 {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.social-buttons {
+    display: flex;
+    padding: 20px 0px 90px 90px;
+    gap: 1.5rem;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+}
+
+.social-btn i {
+    font-size: 1.25rem;
+    color: inherit;
+}
+
+.resume-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.resume-btn:hover {
+    background-color: #45a049;
+}
+
+.github-btn {
+    background-color: #333;
+    color: white;
+}
+
+.github-btn:hover {
+    background-color: #2b2b2b;
+}
+
+.linkedin-btn {
+    background-color: #0077b5;
+    color: white;
+}
+
+.linkedin-btn:hover {
+    background-color: #006396;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-buttons {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .social-btn {
+        justify-content: center;
+    }
+}
+/* Skills Grid */
+.skills-grid {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-category {
+    margin-bottom: 3rem;
+}
+
+.skills-category h4 {
+    color: #151515;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.skills-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.skill-item span {
+    font-size: 0.9rem;
+    color: #151515;
+    text-align: center;
+}
+/* end of heroBox -> skillBox*/
+
+i {
+  font-size: 800%;
+  color: black;
+  
+}
+
+#container-2 { 
+  background: #F4F4F4;
+  margin-bottom: 50px;
+  margin-top: 25px;
+}
+
+#container-2 h3 {
+  letter-spacing: 4px;
+  padding: 30px 0px 10px 100px;
+}
+
+.row-fluid {
+    width: 100%;
+}
+
+.skills-block {
+    text-align: center;
+
+}
+
+.iconSkill {
+    margin-bottom: 60px;
+}
+
+/* end of skillBox -> workBox*/
+#container-3 {
+  background-color:#151515;
+
+}
+
+#container-3 h3{
+  color:#F4F4F4;
+padding: 50px 20px 50px 70px;
+  letter-spacing: 4px;
+}
+
+#grid {
+    max-width:100%;
+    margin:0 auto;
+    padding:0;
+    font-size:0;
+    list-style:none;
+    background-color:#151515;
+  
+}
+#grid li {
+    display: inline-block;
+    width:25%;
+    vertical-align:middle;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+        
+.gridCell {
+  border:3px solid #151515;
+    display:block;
+    position: relative;
+    overflow:hidden;
+}
+        
+.gridImg {
+    display:block;
+    width: 100%;
+    height: auto;
+    border:none;
+    transform:scale(1);
+    transition:all 0.8s;
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+  
+    
+}
+
+#grid li:hover .gridImg {
+    transform:scale(1.05);
+      -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%);
+  
+}
+        
+
+.gridText {
+    display:block;
+    box-sizing:border-box;
+    position:absolute;
+    margin: auto auto auto -4.1em;
+    left: 50%;
+    padding: 15px;
+    text-align:center;
+    background-color: #151515;
+  border-radius: .2em;
+  
+    font-size:18px;
+    top:50%;
+    color:white;
+    opacity:0;
+    transform:translateY(30px);
+    transition:all .4s;
+}
+#grid li:hover .gridText {
+    transform:translateY(0px);
+    opacity:0.9;
+}
+
+@media (max-width: 9000px) {
+    #grid li {
+        width:33.33%;
+    }
+}
+
+@media (max-width: 700px) {
+    #grid li {
+        width:50%;
+    }
+}
+
+@media (max-width: 550px) {
+    #grid li {
+        width:100%;
+    }
+}
+
+/* end of workBox -> aboutBox*/
+
+#container-4 {
+  width: 100%;  
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: auto;
+  padding-bottom: 100px;
+  background: #151515;
+  color: white;
+  
+}
+
+#container-3 h3 {
+    letter-spacing: 4px;
+    padding: 30px 0px 10px 100px;
+  }
+
+.about {
+  display: block;
+  letter-spacing: 2px;
+  padding: 0px 100px 0px 0px;
+}
+
+/* Contact Section Styles */
+/* Contact Section Styles */
+.contact-section {
+    background-color: #151515;
+    padding: 4rem 0;
+    width: 100%;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0;  /* Removed auto margin */
+
+}
+
+.contact-container h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 4px;
+    text-align: left;  /* Changed to left alignment */
+}
+
+.contact-description {
+    color: #888;
+    text-align: left;  /* Changed to left alignment */
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #252525;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input {
+    height: 50px;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #F4F4F4;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.submit-btn {
+    background-color: #F4F4F4;
+    color: #151515;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 3rem 0;
+    }
+    
+    .contact-container {
+        padding: 0 20px 0 40px;  /* Adjusted padding for mobile */
+    }
+    
+    .contact-container h2 {
+        font-size: 1.75rem;
+    }
+    
+    .form-group input {
+        height: 45px;
+    }
+}
+
+.follow {
+  display: block;
+  letter-spacing: 2px;
+}
+
+.about h3, .contact h3, .follow h3 {
+  margin: 100px 0 25px 0;
+}
+
+.social-icon {
+
+  font-size: 200%;
+  padding: 0 20px 0 0;
+}
+
+.social-icon i {
+  color: white;
+}
+
+.buttonSend {
+    background-color: #F4F4F4;
+    border: none;
+    border-radius: .2em;
+    color: black;
+    padding: 8px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  font-weight: bold;
+}
+
+.buttonSend:hover {
+    background-color: #919191;
+  color: #D7D7D7;
+}
+
+@media (max-width: 768px) {
+    #grid li {
+        width: 100%;
+    }
+    
+    .gridText {
+        font-size: 16px;
+    }
+}
+
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+    #container-4 {
+        padding: 1rem;
+    }
+    
+    .about, .contact, .follow {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+/*end of aboutBox --> footer*/
+
+footer { 
+    padding: 30px 80px 20px 0;
+    display: block;
+    background:#151515; 
+    color: white;
+    font-size: 85%;
+    text-align: end;
+}
+
+/*end of footer*/
+
+/* Projects Page Styles */
+#projects-container {
+    background-color: #151515;
+    color: white;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+#PMS{
+    height: 600px;
+}
+
+#TaskAid{
+    height: 600px;
+}
+
+#port{
+    height: 400px;
+}
+
+
+#projects-container h2 {
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 3rem;
+    color: #F4F4F4;
+}
+
+.sub-para{
+    font-size: 16px;
+    padding-bottom: 0;
+}
+.body-para{
+    padding-top: 0;
+    font-size: 13px;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem;
+    text-align: center;
+    background-color: #333;
+    margin: 0;
+}
+
+.project-card p {
+    padding: 1rem;
+    text-align: center;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #444;
+}
+
+.project-links .btn {
+    background-color: #F4F4F4;
+    color: #151515;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-links .btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Keep all your existing CSS and add/modify these responsive styles */
+
+/* Base responsive settings */
+* {
+    box-sizing: border-box;
+}
+
+/* Header & Navigation responsive */
+@media (max-width: 768px) {
+    #menuIcon {
+        height: 120px;
+    }
+    
+    .logo {
+        height: 140px;
+        margin: 0 auto;
+    }
+    
+    .ul-0 {
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .li-0 {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .a-0 {
+        font-size: 110%;
+        padding: 10px;
+    }
+}
+
+/* TextBox responsive */
+@media (max-width: 768px) {
+    .textBox {
+        background-size: 20rem;
+        background-position: center 20%;  /* Adjusted from 10% to 20% to move background up */
+        padding-top: 220px;  /* Reduced from 280px to 220px to reduce top space */
+        height: auto;
+        min-height: 500px;  /* Reduced from 600px */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .Intro {
+        font-size: 200%;
+        text-align: center;
+        line-height: 40px;
+        margin-top: 0;  /* Remove any top margin */
+        padding-top: 0;
+    }
+
+    .World {
+        font-size: 120%;
+        padding: 20px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .Blob {
+        font-size: 90%;
+        padding: 20px;
+        text-align: center;
+        line-height: 25px;
+    }
+    .hello-world-container{}
+}
+
+/* Container-1 responsive */
+@media (max-width: 768px) {
+    #container-1 {
+        padding: 20px;
+        margin-top: -30px;  /* Reduce space between sections */
+    }
+
+    .social-buttons {
+        padding: 0px 20px 90px 20px;  /* Adjusted padding to be even on both sides */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;  /* Align buttons to the right */
+        width: 100%;
+    }
+
+    .social-btn {
+        width: auto;  /* Changed from 80% to auto */
+        min-width: 200px;  /* Set a minimum width for buttons */
+        margin-left: auto;  /* Push buttons to the right */
+    }
+}
+
+/* Skills Grid responsive */
+@media (max-width: 768px) {
+    .skills-grid {
+        padding: 1rem;
+    }
+
+    .skills-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-item {
+        padding: 0.5rem;
+    }
+}
+
+/* Container-2 responsive */
+@media (max-width: 768px) {
+    #container-2 h3 {
+        padding: 30px 20px 10px 20px;
+        text-align: center;
+    }
+
+    .iconSkill {
+        margin-bottom: 30px;
+    }
+
+    i {
+        font-size: 500%;
+    }
+}
+
+/* Container-3 and Grid responsive */
+@media (max-width: 768px) {
+    #container-3 h3 {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    #grid li {
+        width: 100%;
+    }
+
+    .gridText {
+        font-size: 16px;
+        width: 200px;
+        margin-left: -100px;
+    }
+}
+
+/* Container-4 and About section responsive */
+@media (max-width: 768px) {
+    #container-4 {
+        padding: 20px;
+    }
+
+    .about {
+        padding: 0;
+    }
+
+    .contact-container {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+    }
+}
+
+/* Projects section responsive */
+@media (max-width: 768px) {
+    #PMS, #TaskAid {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .project-card {
+        margin: 10px;
+    }
+
+    .project-card img {
+        height: 200px;
+    }
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+    footer {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+/* General mobile adjustments */
+@media (max-width: 480px) {
+    .Intro {
+        font-size: 150%;
+    }
+
+    .World {
+        font-size: 100%;
+    }
+
+    .Blob {
+        font-size: 80%;
+    }
+
+    .skills-row {
+        grid-template-columns: 1fr;
+    }
+
+    .textBox.background {
+        -ms-transform-origin-x: 0;
+    }
+}
+
+/* Specific adjustments for iPhone and similar devices */
+@media screen and (max-width: 990px) {
+    .textBox {
+        min-height: 600px;  /* Increased height */
+        padding-top: 100px;     /* Remove top padding */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;  /* Align content to bottom */
+        background-position: center top;  /* Position image at top */
+        background-size: 15rem;
+        padding-bottom: 20px;  /* Add some bottom padding */
+    }
+
+    /* Text container adjustments */
+    .textBox > div {
+        margin-top: 180px;  /* Push text content down */
+    }
+
+    /* Text adjustments */
+    .Intro {
+        font-size: 180%;
+        padding: 10px 20px;
+        margin-top: 0;
+    }
+
+    .World {
+        font-size: 110%;
+        padding: 10px 20px;
+    }
+
+    .Blob {
+        font-size: 85%;
+        padding: 10px 20px;
+    }
+
+    /* Social buttons and container adjustments */
+    #container-1 {
+        min-height: 300px;  /* Increased container height */
+        height: auto;       /* Allow container to expand */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+
+    .social-buttons {
+        padding: 20px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        order: 2;  /* Move social buttons below hello world */
+    }
+
+    #hello-world-container {
+        order: 1;  /* Move hello world above social buttons */
+        margin-bottom: 20px;  /* Add space between elements */
+    }
+
+    .social-btn {
+        width: 80%;
+        margin: 5px 0;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* Additional breakpoint for slightly larger phones */
+@media screen and (min-width: 415px) and (max-width: 480px) {
+    .textBox {
+        min-height: 650px;
+        background-size: 18rem;
+    }
+
+    #container-1 {
+        min-height: 320px;
+    }
+}
+
+/* Hello World Container Styles */
+#container-1 {
+    min-height: 15vh;
+    background-color: #151515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+#hello-world-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.letter-btn {
+    width: 45px;
+    height: 50px;
+    border-radius: 6px;
+    border: none;
+    background-color: white;
+    color: #151515;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 3px;
+    opacity: 0; /* Start invisible */
+    transform: scale(0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    visibility: visible; /* Ensure visibility property is set */
+}
+
+.space {
+    width: 20px;
+}
+
+.letter-btn.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.letter-btn:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+}
+
+/* Media queries for mobile screens */
+@media (max-width: 768px) {
+    #hello-world-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .letter-btn:nth-child(-n+5) {
+        margin-bottom: 5px;
+    }
+
+    .space {
+        width: 100%;
+        height: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        margin: 0 2px;
+    }
+}
+
+@media (max-width: 320px) {
+    .letter-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        margin: 0 1px;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-box">
+                <h1 class="logo">
+                    <a class="a-logo" href="index.html">
+                        <img id="menuIcon" src="./Assets/Palak.png" alt="Logo">
+                    </a>
+                </h1>
+            </div>
+            <ul class="ul-0" id="primary-navigation">
+                <li class="li-0"><a class="a-0" href="index.html#container-2">skills</a></li>
+                <li class="li-0"><a class="a-0" href="projects.html">work</a></li>
+                <li class="li-0"><a class="a-0" href="index.html#container-4">about</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="projects-container">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" id="taskaid">
+                <img src="./Assets/TaskAid-todo.png" alt="TaskAid Project">
+                <h3>TaskAid</h3>
+                <p>A Task Management Tool for ADHD individuals</p>
+                <p>TaskAid is a web-based tool designed specifically for individuals with ADHD to improve task management and productivity. The platform focuses on simplicity, clarity, and reducing distractions, allowing users to stay focused and organized.</p>
+                <p>Key features include a one-task-at-a-time mode, visual aids for task prioritization, and a clean, minimalist design to reduce cognitive load. The app also includes customizable reminders and a progress tracker to motivate users as they complete tasks.
+
+                    Currently, TaskAid is in development and has not been deployed yet. You can check out the code and contribute to the project on GitHub.</p>
+                <p>TaskAid is built with a modern, scalable tech stack that ensures it runs smoothly across all devices:
+
+                    Frontend: HTML, CSS, and JavaScript (for dynamic, interactive elements)
+                    Backend: PHP and XAMPP (for server-side functionality and database management)
+                    Database: MySQL (to store and manage user data)
+                    Design Tools: Photoshop and Figma (for UI/UX design)
+                    Hosting: Currently being prepared for deployment</p>
+                <div class="project-links">
+                    <a href="https://github.com/pro-palak/TaskAid" target="_blank" class="btn">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card" id="weather-app">
+                <img src="./Assets/PMS2.png" alt="Weather App Project" id="PMS2">
+                <h3>Parcel Management System</h3>
+                <p>For my assignment in Software Architecture, I developed a Depot Parcel Processing System, which simulates depot workers processing customer parcels. The application follows a three-tier architecture and utilizes the Model-View-Controller (MVC) pattern to structure the user interface.</p>
+                <p>The system consists of several key classes, such as Parcel, Customer, QueueOfCustomers, and Log, all implemented using appropriate design patterns. The Singleton pattern was applied in the Log class to ensure that only one instance of the log exists throughout the program, recording events like customer queue entries and parcel processing. The system also features fee calculations, parcel sorting, and the management of queues, with the Worker class handling the core processing logic.</p>
+                <p>A GUI was developed using Java Swing to display a real-time view of the current queue of customers, parcels to be processed, and details of the parcel being processed. As I built the GUI iteratively, I followed the MVC pattern to separate the application logic, user interface, and data handling, ensuring maintainability and scalability.
+
+                    I scored 96/100 for this assignment, demonstrating my ability to implement and integrate architectural patterns effectively while focusing on user experience.</p>
+                <div class="project-links">
+                    <a href="https://github.com/pro-palak/ParcelManagementSystem" target="_blank" class="btn">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card" id="registration-website">
+                <img src="./Assets/Zoetis.png" alt="registration-website" id="PMS2">
+                <h3>Events Registration Websites and Apps</h3>
+                <p>During my one-year student placement as an Event Technology Assistant at TAG, an award-winning entertainment travel and event management company, I was responsible for supporting a wide range of event technology services for high-profile clients across the UK, US, and Asia Pacific.</p>
+                <p>I worked on 28 diverse projects, including events for major brands such as Lenovo, Hiscox, IATA, Epson, CDW, and Haier. My key responsibilities included:
+
+                    Website Development: I built event registration websites using platforms like Eventsforce and WIX. I also enhanced websites with advanced CSS for better design and integration of backend tools via JavaScript.
+                    
+                    Email & Graphic Design: I created email templates using HTML and CSS, managing bulk emails and designing visual content such as banners, logos, and proposals using Photoshop and Canva.
+                    
+                    Event Apps & Floorplans: I developed event apps using All in the Loop, providing real-time updates and communication for attendees. Additionally, I designed event floorplans to ensure smooth logistics.
+                    
+                    Client & Supplier Coordination: I supported clients with technology requests, handled communications, processed invoices, and generated daily/weekly reports.
+                    
+                    Onsite Event Support: I provided technical support during events, ensuring that all event technology ran smoothly.</p>
+                <p>Throughout my placement, I gained hands-on experience in event technology, problem-solving, communication, and teamwork while working under tight deadlines. I also had the opportunity to attend industry conferences like Event Tech Live and Tech London Conference, where I learned about the latest trends in event technology.</p>
+            </div>
+            <div class="project-card" id="Portfolio Website">
+                <img src="./Assets/PPF.png" alt="portfolio-website" id="PMS3">
+                <h3>Personal Portfolio Website</h3>
+                <p>My portfolio is a showcase of my skills, projects, and experiences, built using HTML, CSS, and JavaScript and deployed via Netlify for a seamless and responsive experience. It serves as a digital space where I highlight my work in software development, UI/UX design, and event technology.                </p>
+                <p>Designed with clean aesthetics and intuitive navigation, my portfolio highlights projects like TaskAid (an ADHD task management tool), my Software Architecture coursework, and my event technology placement at TAG. The goal was to create a personalized, engaging, and professional online presence that effectively represents my work and expertise.                </p>
+                <p>As I continue to grow, so will this portfolio. Feel free to explore my work, check out the GitHub repository, and follow along as I build new and exciting projects! 🚀                </p>
+                <div class="project-links">
+                    <a href="https://github.com/pro-palak/ParcelManagementSystem" target="_blank" class="btn">GitHub</a>
+                </div>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-box">
+                <h1 class="logo">
+                    <a class="a-logo" href="">
+                        <img id="menuIcon" src="./Assets/Palak.png" alt="Logo">
+                    </a>
+                </h1>
+            </div>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+                <span class="sr-only">Menu</span>
+            </button>
+            <ul class="ul-0" id="primary-navigation">
+                <li class="li-0"><a class="a-0" href="#container-2">skills</a></li>
+                <li class="li-0"><a class="a-0" href="#container-3">projects</a></li>
+                <li class="li-0"><a class="a-0" href="#container-4">about</a></li>
+                <li class="li-0"><a class="a-0" href="career.html">work & education</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="textBox">
+      <div>
+        <p class="Intro">Pixels, Logic, and Everything in Between...</p>
+        <p class="World">Welcome to my world of coding and design.</p>
+        <p class="Blob">A space where creativity meets logic, design meets code, and chaos finds its rhythm. From pixels to algorithms, here’s a glimpse into my journey of building, designing, and discovering.        </p>
+      </div>
+    </div>
+
+    <div class="social-buttons">
+        <a href="https://drive.google.com/file/d/1XEYc484bbtYQO0SlZMXc0UaLNC83n_Xn/view?usp=drive_link" target="_blank" class="social-btn resume-btn">
+            <i class="fa fa-file-text"></i>
+            Resume
+        </a>
+        <a href="https://github.com/pro-palak" target="_blank" class="social-btn github-btn">
+            <i class="fa fa-github"></i>
+            GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/palak-goyani-803146222/" target="_blank" class="social-btn linkedin-btn">
+            <i class="fa fa-linkedin"></i>
+            LinkedIn
+        </a>
+    </div>
+
+    <div id="container-1" class="container-fluid">
+        <div id="hello-world-container"></div>
+    </div>
+    
+    <div id="container-2" class="container-fluid">
+        <h3 class="section-title">SKILLS AND TOOLS</h3>
+        <div class="skills-grid">
+            <!-- Frontend -->
+            <div class="skills-category">
+                <h4>Frontend</h4>
+                <div class="skills-row">
+                    <div class="skill-item">
+                        <img src="./Assets/HTML5_logo_and_wordmark.svg.png" alt="HTML5">
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./Assets/css-3.svg" alt="CSS3">
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./Assets/javascript-1.svg" alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./Assets/1174949_js_react js_logo_react_react native_icon.svg" alt="React.js">
+                        <span>React.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./Assets/python-logo-only.png" alt="Python">
+                        <span>Python</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Backend -->
+            <div class="skills-category">
+                <h4>Backend</h4>
+                <div class="skills-row">
+                    <div class="skill-item">
+                        <img src="./Assets/java.png" alt="Java">
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./Assets/C_Logo.png" alt="C">
+                        <span>C</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./Assets/mysql-logo-svgrepo-com.svg" alt="SQL">
+                        <span>SQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./Assets/new-php-logo.svg" alt="PHP">
+                        <span>PHP</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tools -->
+            <div class="skills-category">
+                <h4>Tools & Others</h4>
+                <div class="skills-row">
+                    <div class="skill-item">
+                        <img src="./Assets/Git_icon.svg.png" alt="Git">
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./Assets/Microsoft_365_(2022).svg.png" alt="Microsoft365">
+                        <span>Microsoft 365</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./Assets/ux-ui-logo.png" alt="Microsoft365">
+                        <span>UI/UX</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./Assets/Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop">
+                        <span>Photoshop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div id="container-3">
+        <h3>PROJECTS: </h3>
+        <ul id="grid">
+            <li>
+                <a class="gridCell" href="projects.html#taskaid" data-project="taskaid">
+                    <img class="gridImg" src="./Assets/TaskAid.png" id="TaskAid">
+                    <span class="gridOverlay"></span>
+                    <span class="gridText">View Project</span>
+                </a>
+            </li>
+            <li>
+                <a class="gridCell" href="projects.html#weather-app" data-project="weather-app">
+                    <img class="gridImg" src="./Assets/PMS.jpg" id="PMS">
+                    <span class="gridOverlay"></span>
+                    <span class="gridText">View Project</span>
+                </a>
+            </li>
+            <li>
+                <a class="gridCell" href="projects.html#registration-website" data-project="registration-website">
+                    <img class="gridImg" src="./Assets/RegWeb.jpg" id="PMS">
+                    <span class="gridOverlay"></span>
+                    <span class="gridText">View Project</span>
+                </a>
+            </li>
+            <li>
+                <a class="gridCell" href="projects.html#Portfolio Website" data-project="portfolio-website">
+                    <img class="gridImg" src="./Assets/palak.png" id="Port">
+                    <span class="gridOverlay"></span>
+                    <span class="gridText">View Project</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div id="container-4" class="row">
+      <section class="about">
+          <h3>THE AUTHOR</h3>
+          <p>I am a Computer Science student with a passion for designing impactful digital experiences. Whether it's coding a sleek, user-centered tool or crafting a visual masterpiece, I thrive in the intersection of creativity and technology. </p>
+
+            <p> I’m not buried in lines of code or immersed in design challenges, you’ll likely find me exploring the latest in music, astrophysics, or F1 (because who doesn’t love speed and precision?). I believe in blending functionality with creativity, and my journey through projects like TaskAid, event technology, and software architecture has been a testament to this.</p>
+            
+            <p>With a strong foundation in Java, CSS, HTML, and a keen interest in machine learning and sustainability, I’m on a mission to craft tech solutions that are not just smart but also accessible, meaningful, and built with purpose. Let’s create something that makes an impact big or small and pushes the boundaries of what’s possible.
+            
+            </p>
+        </section>
+        <section class="contact-section">
+            <div class="contact-container">
+                <h2>Get in Touch</h2>
+                <p class="contact-description">Have questions? I would love to hear from you.</p>
+                
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    <input type="hidden" name="access_key" value="0baa74ff-b9d5-435d-a05f-f1d364ab4486">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+      <section class="follow col-lg-4 col-sm-4 col-xs-12">
+          <h3>FIND ME ONLINE</h3>
+          <a href="https://www.linkedin.com/in/palak-goyani-803146222/" class="social-icon"> <i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/pro-palak" class="social-icon"> <i class="fa fa-github"></i></a>
+        </section>
+      
+  </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
