@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Journey - Portfolio</title>
+    
+    <title>Palak's Portfolio | Career Journey</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./Assets/Palak.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Assets/Palak.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Assets/Palak.png">
+    <link rel="shortcut icon" type="image/png" href="./Assets/Palak.png">
+
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="career.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700" rel="stylesheet">
 </head>
@@ -19,10 +25,15 @@
                     </a>
                 </h1>
             </div>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
                 <span class="sr-only">Menu</span>
             </button>
-            <ul class="ul-0" id="primary-navigation">
+            <ul class="primary-navigation" id="primary-navigation" data-visible="false">
                 <li class="li-0"><a class="a-0" href="index.html#container-2">skills</a></li>
                 <li class="li-0"><a class="a-0" href="index.html#container-3">projects</a></li>
                 <li class="li-0"><a class="a-0" href="index.html#container-4">about</a></li>
@@ -40,7 +51,7 @@
         <div class="timeline">
             <!-- Work Experience Section -->
             <div class="timeline-section">
-                <h2 class="section-title">Work Experience</h2>
+                <h2 class="section-title1">Work Experience</h2>
                 
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-dot"></div>
@@ -68,6 +79,7 @@
                         <div class="timeline-date">2022 September - 2023 August</div>
                         <h3>Center Director</h3>
                         <p class="company">Code Ninjas</p>
+                        <p class="company"> London, United Kingdom</p>
                         <ul class="achievement-list">
                             <li>Created a fun and safe learning environment through game-based curriculum training, helping children
                                 develop their coding skills.</li>
@@ -85,6 +97,7 @@
                         <div class="timeline-date">2022 August - 2023 August</div>
                         <h3>Volunteer Student Rep</h3>
                         <p class="company">University Of Hertfordshire</p>
+                        <p class="company"> London, United Kingdom</p>
                         <ul class="achievement-list">
                             <li>Supported the Indian Society in organising and celebrating traditional festivals, including hosting the
                                 first-ever Navratri event at the university, which promoted cultural awareness and community
@@ -98,7 +111,7 @@
 
             <!-- Education Section -->
             <div class="timeline-section">
-                <h2 class="section-title">Education</h2>
+                <h2 class="section-title1">Education</h2>
                 
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-dot"></div>
@@ -106,6 +119,7 @@
                         <div class="timeline-date">2021 - 2025</div>
                         <h3>Bachelor of Science in Computer Science</h3>
                         <p class="institution">Univerity Of Hertfordshire</p>
+                        <p class="company"> London, United Kingdom</p>
                         <ul class="achievement-list">
                             <li>Major: Computer Science (Hons)</li>
                             <li>One Year Industrial Placement</li>
@@ -121,6 +135,7 @@
                         <div class="timeline-date">2019 - 2021</div>
                         <h3>High School</h3>
                         <p class="institution">Metas Adventist School</p>
+                        <p class="company"> Surat, India</p>
                         <ul class="achievement-list">
                             <li>Scored 84%</li>
                             <li>Major in Computer Science</li>                        </ul>

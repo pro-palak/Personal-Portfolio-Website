@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
+    
+    <title>Palak's Portfolio | Career Journey</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./Assets/Palak.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Assets/Palak.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Assets/Palak.png">
+    <link rel="shortcut icon" type="image/png" href="./Assets/Palak.png">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,10 +25,19 @@
                     </a>
                 </h1>
             </div>
-            <ul class="ul-0" id="primary-navigation">
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="sr-only">Menu</span>
+            </button>
+            <ul class="primary-navigation" id="primary-navigation" data-visible="false">
                 <li class="li-0"><a class="a-0" href="index.html#container-2">skills</a></li>
-                <li class="li-0"><a class="a-0" href="projects.html">work</a></li>
+                <li class="li-0"><a class="a-0" href="index.html#container-3">projects</a></li>
                 <li class="li-0"><a class="a-0" href="index.html#container-4">about</a></li>
+                <li class="li-0"><a class="a-0" href="career.html">work & education</a></li>
             </ul>
         </nav>
     </header>
@@ -85,7 +102,7 @@
                 <p>Designed with clean aesthetics and intuitive navigation, my portfolio highlights projects like TaskAid (an ADHD task management tool), my Software Architecture coursework, and my event technology placement at TAG. The goal was to create a personalized, engaging, and professional online presence that effectively represents my work and expertise.                </p>
                 <p>As I continue to grow, so will this portfolio. Feel free to explore my work, check out the GitHub repository, and follow along as I build new and exciting projects! 🚀                </p>
                 <div class="project-links">
-                    <a href="https://github.com/pro-palak/ParcelManagementSystem" target="_blank" class="btn">GitHub</a>
+                    <a href="https://github.com/pro-palak/Personal-Portfolio-Website" target="_blank" class="btn">GitHub</a>
                 </div>
             </div>
             <!-- Add more project cards as needed -->
@@ -93,6 +110,6 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="projects.js"></script>
+    <script src="project.js"></script>
 </body>
 </html>

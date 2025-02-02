@@ -164,3 +164,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const primaryNav = document.querySelector('.primary-navigation');
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    
+    navToggle.addEventListener('click', () => {
+        const visibility = primaryNav.getAttribute('data-visible');
+        
+        if (visibility === "false" || !visibility) {
+            primaryNav.setAttribute('data-visible', true);
+            navToggle.setAttribute('aria-expanded', true);
+            document.body.classList.add('nav-open');
+        } else {
+            primaryNav.setAttribute('data-visible', false);
+            navToggle.setAttribute('aria-expanded', false);
+            document.body.classList.remove('nav-open');
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (primaryNav.getAttribute('data-visible') === "true" && 
+            !primaryNav.contains(e.target) && 
+            !navToggle.contains(e.target)) {
+            primaryNav.setAttribute('data-visible', false);
+            navToggle.setAttribute('aria-expanded', false);
+            document.body.classList.remove('nav-open');
+        }
+    });
+
+    // Close menu when clicking on a link
+    primaryNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            primaryNav.setAttribute('data-visible', false);
+            navToggle.setAttribute('aria-expanded', false);
+            document.body.classList.remove('nav-open');
+        });
+    });
+});
