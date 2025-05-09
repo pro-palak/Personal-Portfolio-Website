@@ -53,26 +53,96 @@
                 <p>Key features include a one-task-at-a-time mode, visual aids for task prioritization, and a clean, minimalist design to reduce cognitive load. The app also includes customizable reminders and a progress tracker to motivate users as they complete tasks.
 
                     Currently, TaskAid is in development and has not been deployed yet. You can check out the code and contribute to the project on GitHub.</p>
-                <p>TaskAid is built with a modern, scalable tech stack that ensures it runs smoothly across all devices:
-
-                    Frontend: HTML, CSS, and JavaScript (for dynamic, interactive elements)
-                    Backend: PHP and XAMPP (for server-side functionality and database management)
-                    Database: MySQL (to store and manage user data)
-                    Design Tools: Photoshop and Figma (for UI/UX design)
-                    Hosting: Currently being prepared for deployment</p>
+                <p>TaskAid is built with a modern, scalable tech stack that ensures it runs smoothly across all devices:</p>
+                    <ul><li>Frontend: HTML, CSS, and JavaScript (for dynamic, interactive elements)</li>
+                        <li >PHP and XAMPP (for server-side functionality and database management)</li>
+                        <li>Database: MySQL (to store and manage user data)</li>
+                        <li>Design Tools: Photoshop and Figma (for UI/UX design)</li>
+                        <li>Hosting: Currently being prepared for deployment</li></ul>
                 <div class="project-links">
                     <a href="https://github.com/pro-palak/TaskAid" target="_blank" class="btn">GitHub</a>
                 </div>
             </div>
 
+            <div class="project-card" id="track-my-job">
+                <img src="./Assets/TMJLS.png" alt="track-my-job" id="PMS4">
+                <h3>TrackMyJob</h3>
+                <p><strong>TrackMyJob</strong> is a cross-platform mobile application developed using <strong>React Native</strong> and <strong>Expo</strong>, designed to help job seekers efficiently track their job applications and related tasks. The app allows users to set deadlines, upload documents, visualize progress through charts, and receive notifications — all within a sleek and intuitive interface.</p>
+
+                <p>I created TrackMyJob to streamline the job-hunting process for students and professionals, focusing on delivering a smooth user experience. The app features multiple screens managed with <strong>React Navigation</strong>, uses <strong>date-fns</strong> for smart scheduling, and integrates <strong>expo-notifications</strong> to help users stay on top of important tasks, keeping track and job application deadlines.</p>
+
+                <p>From UI design to state management and dependency integration, I independently handled the full development cycle. This project demonstrates my ability to build production-ready mobile apps.</p>
+
+                <p>If curious, you can preview the project instantly using <strong>Expo Snack</strong> — recommended to run via the <strong>Expo Go</strong> app on a physical device for full functionality:</p>
+
+                <p><a href="https://snack.expo.dev/@palakgoyani/4728a0" target="_blank" class="btn">Try TrackMyJob on Snack</a></p>
+
+                <div class="project-links">
+                    <a href="https://github.com/pro-palak/TrackMyJob" target="_blank" class="btn">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card" id="RoboCar">
+                <img src="./Assets/Pogo.jpg" alt="RoboCar" id="PMS4">
+                <h3>AutoTrack: Embedded Autonomous Follower Bot</h3>
+                <p>
+                <strong>AutoTrack</strong> is a real-time embedded system project developed for a university assignment at the 
+                <strong>University of Hertfordshire</strong>. Built on the Initio robot platform and programmed in ISO C, 
+                the robot autonomously follows a target object using live camera input and maintains a safe distance using ultrasonic sensors.
+              </p>
+            
+              <ul>
+                <li>🎯 <strong>Target Tracking:</strong> Real-time color blob detection using camera imagery.</li>
+                <li>🧵 <strong>Multithreaded Architecture:</strong> Dedicated threads for vision processing and control logic using POSIX threads.</li>
+                <li>🛡️ <strong>Safety Mechanisms:</strong> Obstacle detection with ultrasonic sensors and automatic stop behavior.</li>
+                <li>📐 <strong>System Evaluation:</strong> Includes timing analysis, fault tree, and resource usage reports.</li>
+                <li>🔧 <strong>Low-Level Hardware Access:</strong> Uses WiringPi for controlling motors and sensors on a Raspberry Pi.</li>
+              </ul>
+            
+              <p>
+                This project was submitted as part of an advanced embedded systems module and would not have been possible without 
+                the <strong>expert guidance of Professor Raimund Kirner</strong>, whose support and provided libraries were instrumental 
+                in achieving the final result.
+              </p>
+              <p>
+                <em>Technologies used:</em> C (ISO standard), Raspberry Pi, WiringPi, `raspistill`, ultrasonic distance sensing, pthreads.
+              </p>
+                <div class="project-links">
+                    <a href="https://github.com/pro-palak/RoboCar" target="_blank" class="btn">GitHub</a>
+                </div>
+            </div>
             <div class="project-card" id="weather-app">
                 <img src="./Assets/PMS2.png" alt="Weather App Project" id="PMS2">
                 <h3>Parcel Management System</h3>
-                <p>For my assignment in Software Architecture, I developed a Depot Parcel Processing System, which simulates depot workers processing customer parcels. The application follows a three-tier architecture and utilizes the Model-View-Controller (MVC) pattern to structure the user interface.</p>
-                <p>The system consists of several key classes, such as Parcel, Customer, QueueOfCustomers, and Log, all implemented using appropriate design patterns. The Singleton pattern was applied in the Log class to ensure that only one instance of the log exists throughout the program, recording events like customer queue entries and parcel processing. The system also features fee calculations, parcel sorting, and the management of queues, with the Worker class handling the core processing logic.</p>
-                <p>A GUI was developed using Java Swing to display a real-time view of the current queue of customers, parcels to be processed, and details of the parcel being processed. As I built the GUI iteratively, I followed the MVC pattern to separate the application logic, user interface, and data handling, ensuring maintainability and scalability.
-
-                    I scored 96/100 for this assignment, demonstrating my ability to implement and integrate architectural patterns effectively while focusing on user experience.</p>
+                <p>
+                    For my assignment in <strong>Software Architecture</strong>, I designed and implemented a <strong>Depot Parcel Processing System</strong> 
+                    to simulate the workflow of depot workers handling customer parcels. The application adheres to a <strong>three-tier 
+                    architecture</strong> (presentation, logic, data) and employs the <strong>Model-View-Controller (MVC) pattern</strong> to 
+                    decouple the user interface from business logic, ensuring modularity and ease of maintenance.
+                </p>
+                <p>
+                    The system's core functionality revolves around key classes like <code>Parcel</code>, <code>Customer</code>, <code>QueueOfCustomers</code>, 
+                    and <code>Log</code>, each implemented with deliberate design patterns. For instance:
+                    <ul>
+                        <li><strong>Singleton Pattern</strong>: Applied to the <code>Log</code> class to guarantee a single instance for tracking events 
+                            (e.g., queue entries, parcel processing) system-wide.</li>
+                        <li><strong>Strategy Pattern</strong>: Used for dynamic fee calculations based on parcel type (e.g., standard, express).</li>
+                        <li><strong>Observer Pattern</strong>: Enabled real-time GUI updates by notifying the view layer of state changes in queues or parcels.</li>
+                    </ul>
+                </p>
+                <p>
+                    The <strong>Java Swing GUI</strong> provides an interactive dashboard displaying:
+                    <ul>
+                        <li>Real-time customer queues with priority handling.</li>
+                        <li>Parcel processing status (e.g., weight, fee, destination).</li>
+                        <li>A logging panel for auditing system events.</li>
+                    </ul>
+                </p>
+                <p>
+                    <strong>Outcome</strong>: The project earned <strong>96/100</strong>, with praise for its robust architecture, 
+                    adherence to design patterns, and intuitive UI. It underscored my ability to translate theoretical 
+                    concepts (e.g., SOLID principles, layered design) into functional, maintainable software.
+                </p>
                 <div class="project-links">
                     <a href="https://github.com/pro-palak/ParcelManagementSystem" target="_blank" class="btn">GitHub</a>
                 </div>
@@ -95,17 +165,59 @@
                     Onsite Event Support: I provided technical support during events, ensuring that all event technology ran smoothly.</p>
                 <p>Throughout my placement, I gained hands-on experience in event technology, problem-solving, communication, and teamwork while working under tight deadlines. I also had the opportunity to attend industry conferences like Event Tech Live and Tech London Conference, where I learned about the latest trends in event technology.</p>
             </div>
+            <div class="project-card" id="ActivitySense">
+                <img src="./Assets/ASLS.png" alt="ActivitySense Human Activity Classification" id="PMS5">
+                <h3>ActivitySense: Human Activity Classification</h3>
+                <p>
+                    <strong>ActivitySense</strong> is a machine learning project that classifies human movement patterns (e.g., walking, running, resting) 
+                    from sensor data using <strong>Principal Component Analysis (PCA)</strong> for dimensionality reduction and 
+                    <strong>Support Vector Machines (SVM)</strong> for classification. Developed in <strong>Python</strong> with <strong>Jupyter Notebook</strong>, 
+                    the system processes real-world accelerometer/gyroscope datasets to demonstrate how raw sensor signals can be transformed 
+                    into interpretable activity insights.
+                </p>
+                <p>
+                    <strong>Technical Implementation:</strong>
+                    <ul>
+                        <li><strong>Data Pipeline</strong>: Leveraged <code>pandas</code> for cleaning and normalizing noisy sensor data, handling missing values, 
+                            and segmenting time-series signals into sliding windows for feature extraction.</li>
+                        <li><strong>Dimensionality Reduction</strong>: Applied <strong>PCA</strong> to condense 30+ raw features (e.g., mean, variance, FFT coefficients) 
+                            into 3 principal components, retaining 95% variance while reducing computational overhead.</li>
+                        <li><strong>Model Tuning</strong>: Optimized SVM hyperparameters (<code>C</code>, <code>gamma</code>, kernel selection) via grid search, 
+                            achieving 92% accuracy on test data. Compared performance against baseline models (Random Forest, Logistic Regression).</li>
+                        <li><strong>Visualization</strong>: Used <code>matplotlib</code> and <code>seaborn</code> to plot PCA loadings, confusion matrices, 
+                            and decision boundaries, emphasizing interpretability for non-technical stakeholders. Highlighted trade-offs between model complexity (e.g., RBF kernel vs. linear SVM) and real-time deployment constraints.</li>
+                    </ul>
+                </p>
+                <p>
+                    <strong>Outcome</strong>: The project not only achieved high classification accuracy but also served as a case study in 
+                    <strong>end-to-end ML workflow design</strong>—from data wrangling to actionable insights. Techniques used here are directly 
+                    applicable to wearable tech, healthcare monitoring, and IoT edge devices.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/pro-palak/Human-Activity-Classification-using-PCA-and-SVM" target="_blank" class="btn">GitHub</a>
+                </div>
+            </div>        
+            <div class="project-card" id="BATHS">
+                <img src="./Assets/BATHSLS.png" alt="BATHS" id="PMS4">
+                <h3>BATHS - Naval Strategy Game</h3>
+                <p>BATHS (Blue Admiral Tactical Historical Simulator) is a Java-based naval strategy game prototype set during the Napoleonic Wars. You play as the Admiral of the Blue, assembling and commanding a fleet of ships while managing limited funds, facing tactical sea encounters, and striving for naval dominance.</p>
+                <p>The game features a GUI built with Java Swing, enabling players to commission ships, fight encounters, and track game progression in a single-player experience. It was developed using Object-Oriented Programming principles and modular Java classes for ships, encounters, and game state logic.</p>
+                <p>This project was built as part of my university coursework and serves as an example of game design, GUI development, and strategic gameplay logic. A future version may include multiplayer functionality, AI opponents, and more randomized challenges. 🛳️</p>
+                <div class="project-links">
+                    <a href="https://github.com/pro-palak/BATHS---Blue-Admiral-Tactical-Historical-Simulator" target="_blank" class="btn">GitHub</a>
+                </div>
+            </div>
             <div class="project-card" id="Portfolio Website">
                 <img src="./Assets/PPF.png" alt="portfolio-website" id="PMS3">
                 <h3>Personal Portfolio Website</h3>
-                <p>My portfolio is a showcase of my skills, projects, and experiences, built using HTML, CSS, and JavaScript and deployed via Netlify for a seamless and responsive experience. It serves as a digital space where I highlight my work in software development, UI/UX design, and event technology.                </p>
-                <p>Designed with clean aesthetics and intuitive navigation, my portfolio highlights projects like TaskAid (an ADHD task management tool), my Software Architecture coursework, and my event technology placement at TAG. The goal was to create a personalized, engaging, and professional online presence that effectively represents my work and expertise.                </p>
-                <p>As I continue to grow, so will this portfolio. Feel free to explore my work, check out the GitHub repository, and follow along as I build new and exciting projects! 🚀                </p>
+                <p> <strong>Fully responsive</strong>, portfolio website built with <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>JavaScript</strong>
+                <p>My portfolio is a showcase of my skills, projects, and experiences and deployed via Netlify for a seamless and responsive experience. It serves as a digital space where I highlight my work in software development, UI/UX design, and event technology.                </p>
+                <p>Designed with clean aesthetics and intuitive navigation, my portfolio highlights projects like TaskAid (an ADHD task management tool), my Software Architecture coursework, and my event technology placement at TAG. The goal was to create a personalized, engaging, and professional online presence that effectively represents my work and expertise.</p>
+                <p>As I continue to grow, so will this portfolio. Feel free to explore my work, check out the GitHub repository, and follow along as I build new and exciting projects! 🚀</p>
                 <div class="project-links">
                     <a href="https://github.com/pro-palak/Personal-Portfolio-Website" target="_blank" class="btn">GitHub</a>
                 </div>
             </div>
-            <!-- Add more project cards as needed -->
         </div>
     </div>
 
