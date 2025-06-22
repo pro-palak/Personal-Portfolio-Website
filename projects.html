@@ -82,7 +82,7 @@
             <div class="project-card" id="Portfolio Website">
                 <img src="./Assets/PPF.png" alt="portfolio-website" id="PMS3">
                 <h3>Personal Portfolio Website</h3>
-                <p>My portfolio is a showcase of my skills, projects, and experiences, built using HTML, CSS, and JavaScript and deployed via Netlify for a seamless and responsive experience. It serves as a digital space where I highlight my work in software development, UI/UX design, and event technology.                </p>
+                <p>My portfolio is a showcase of my skills, projects, and experiences, built using HTML, CSS, and JavaScript and deployed via Vercel for a seamless and responsive experience. It serves as a digital space where I highlight my work in software development, UI/UX design, and event technology.                </p>
                 <p>Designed with clean aesthetics and intuitive navigation, my portfolio highlights projects like TaskAid (an ADHD task management tool), my Software Architecture coursework, and my event technology placement at TAG. The goal was to create a personalized, engaging, and professional online presence that effectively represents my work and expertise.                </p>
                 <p>As I continue to grow, so will this portfolio. Feel free to explore my work, check out the GitHub repository, and follow along as I build new and exciting projects! 🚀                </p>
                 <div class="project-links">
@@ -92,6 +92,7 @@
             <!-- Add more project cards as needed -->
         </div>
     </div>
+
 <div id="chatbot-toggle">
   <img src="Assets/Assistant.png" alt="Chat" />
 </div>
@@ -155,7 +156,7 @@
   }
 
   function respond(input) {
-  let response = `I'm not sure how to help with that. Try asking about Palak’s projects or resume. If you would like to know anything else, please fill the form at the end of the <a href='https://palak-goyani.netlify.app/' target='_blank'>home page</a>.`;
+  let response = `I'm not sure how to help with that. Try asking about Palak’s projects or resume. If you would like to know anything else, please fill the form at the end of the <a href='https://palakgoyani.vercel.app' target='_blank'>home page</a>.`;
 
   input = input.toLowerCase();
 
@@ -164,7 +165,7 @@
   } else if (input.includes("who") || input.includes("about")) {
     response = `Palak is a Computer Science graduate with a First Class Honours Degree and a creative web developer passionate about technology, design, and learning new things.`;
   } else if (input.includes("project")) {
-    response = `You can check out Palak’s projects on her <a href='https://palak-goyani.netlify.app/#container-3' target='_blank'>homepage</a> or her <a href='https://github.com/pro-palak' target='_blank'>GitHub</a>.`;
+    response = `You can check out Palak’s projects on her <a href='https://palakgoyani.vercel.app/#container-3' target='_blank'>homepage</a> or her <a href='https://github.com/pro-palak' target='_blank'>GitHub</a>.`;
   } else if (input.includes("resume") || input.includes("cv")) {
     response = `Here's <a href='https://drive.google.com/file/d/1XEYc484bbtYQO0SlZMXc0UaLNC83n_Xn/view' target='_blank'>Palak’s resume</a> (PDF).`;
   } else if (input.includes("contact")) {
@@ -172,7 +173,7 @@
   } else if (input.includes("skills") || input.includes("technologies")) {
     response = `Palak has experience in JavaScript, React, Python, Git, and more!`;
   } else if (input.includes("experience") || input.includes("job")) {
-    response = `Palak is currently working at All In The Loop as a Technology Executive. She previously worked at TAG - The Appointment Group and taught at Code Ninjas. See her full work history <a href='https://palak-goyani.netlify.app/career' target='_blank'>here</a>.`;
+    response = `Palak is currently working at All In The Loop as a Technology Executive. She previously worked at TAG - The Appointment Group and taught at Code Ninjas. See her full work history <a href='https://palakgoyani.vercel.app/career.html' target='_blank'>here</a>.`;
   } else if (input.includes("hobbies") || input.includes("interests")) {
     response = `Palak loves exploring the mysteries of the universe through learning about Astronomy, and she's passionate about Music 🎵, Reading 📚, and Writing ✍️.`;
   } else if (input.includes("astronomy")) {
@@ -217,6 +218,7 @@
 }
 
 </script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="projects.js"></script>
 </body>
