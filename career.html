@@ -3,15 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Palak's Portfolio | Career Journey</title>
-
-    <link rel="icon" type="image/png" sizes="32x32" href="./Assets/Palak.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./Assets/Palak.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./Assets/Palak.png">
-    <link rel="shortcut icon" type="image/png" href="./Assets/Palak.png">
-
+    <title>Career Journey - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="career.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700" rel="stylesheet">
 </head>
@@ -25,15 +19,10 @@
                     </a>
                 </h1>
             </div>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="hamburger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation">
                 <span class="sr-only">Menu</span>
             </button>
-            <ul class="primary-navigation" id="primary-navigation" data-visible="false">
+            <ul class="ul-0" id="primary-navigation">
                 <li class="li-0"><a class="a-0" href="index.html#container-2">skills</a></li>
                 <li class="li-0"><a class="a-0" href="index.html#container-3">projects</a></li>
                 <li class="li-0"><a class="a-0" href="index.html#container-4">about</a></li>
@@ -51,27 +40,7 @@
         <div class="timeline">
             <!-- Work Experience Section -->
             <div class="timeline-section">
-                <h2 class="section-title1">Work Experience</h2>
-
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2025 April - Present</div>
-                        <h3>Technology Executive</h3>
-                        <p class="company">All In The Loop</p>
-                        <p class="company">Manchester, United Kingdom</p>
-                        <ul class="achievement-list">
-                            <li>Integrated CMS platform with internal tools using Postman API, automating content population for 
-                                virtual events and reducing manual setup time by while improving data accuracy.</li>
-                            <li>Developed and customized web modules using HTML, CSS, and JavaScript to create tailored 
-                                virtual event experiences, leading to higher attendee engagement metrics.</li>
-                            <li>Conducted cross-browser and cross-device testing for event applications, identifying and resolving 
-                                compatibility issues to ensure uptime during critical live events.</li>
-                            <li>Provided onsite and remote technical support for hybrid events, configuring platforms and 
-                                troubleshooting issues in real-time to maintain client satisfaction scores.</li>
-                        </ul>
-                    </div>
-                </div>
+                <h2 class="section-title">Work Experience</h2>
                 
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-dot"></div>
@@ -99,7 +68,6 @@
                         <div class="timeline-date">2022 September - 2023 August</div>
                         <h3>Center Director</h3>
                         <p class="company">Code Ninjas</p>
-                        <p class="company"> London, United Kingdom</p>
                         <ul class="achievement-list">
                             <li>Created a fun and safe learning environment through game-based curriculum training, helping children
                                 develop their coding skills.</li>
@@ -117,7 +85,6 @@
                         <div class="timeline-date">2022 August - 2023 August</div>
                         <h3>Volunteer Student Rep</h3>
                         <p class="company">University Of Hertfordshire</p>
-                        <p class="company"> London, United Kingdom</p>
                         <ul class="achievement-list">
                             <li>Supported the Indian Society in organising and celebrating traditional festivals, including hosting the
                                 first-ever Navratri event at the university, which promoted cultural awareness and community
@@ -131,7 +98,7 @@
 
             <!-- Education Section -->
             <div class="timeline-section">
-                <h2 class="section-title1">Education</h2>
+                <h2 class="section-title">Education</h2>
                 
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-dot"></div>
@@ -139,11 +106,10 @@
                         <div class="timeline-date">2021 - 2025</div>
                         <h3>Bachelor of Science in Computer Science</h3>
                         <p class="institution">Univerity Of Hertfordshire</p>
-                        <p class="company"> London, United Kingdom</p>
                         <ul class="achievement-list">
                             <li>Major: Computer Science (Hons)</li>
                             <li>One Year Industrial Placement</li>
-                            <li>GPA: 3.8/4.0 (Predicted)</li>
+                            <li>GPA: 3.2/4.0 with First Class Honours</li>
                             <li>Relevant Coursework: Data Structures, Algorithms, Web Development, Machine Learning, Artifical Intelligence</li>
                         </ul>
                     </div>
@@ -155,7 +121,6 @@
                         <div class="timeline-date">2019 - 2021</div>
                         <h3>High School</h3>
                         <p class="institution">Metas Adventist School</p>
-                        <p class="company"> Surat, India</p>
                         <ul class="achievement-list">
                             <li>Scored 84%</li>
                             <li>Major in Computer Science</li>                        </ul>
@@ -164,7 +129,131 @@
             </div>
         </div>
     </div>
+<div id="chatbot-toggle">
+  <img src="Assets/Assistant.png" alt="Chat" />
+</div>
 
+<div id="chatbot-box">
+  <div id="chatbot-header">Ask me anything!</div>
+  <div id="chatbot-messages"></div>
+  <input type="text" id="chatbot-input" placeholder="Type a message..." />
+</div>
+
+
+<script>
+  const toggleBtn = document.getElementById("chatbot-toggle");
+  const chatbotBox = document.getElementById("chatbot-box");
+  const messagesBox = document.getElementById("chatbot-messages");
+  const input = document.getElementById("chatbot-input");
+
+  let greeted = false;
+
+  toggleBtn.addEventListener("click", () => {
+    const isVisible = chatbotBox.style.display === "flex";
+    chatbotBox.style.display = isVisible ? "none" : "flex";
+
+    if (!isVisible && !greeted) {
+      showTyping(() => {
+        addMessage("Sarthi", "Hi there! I'm Sarthi, which means 'companion' or 'guide' in Hindi. Ask me about Palak’s projects, hobbies, work, how to contact her, or anything else you'd like to know about her.", "bot");
+      });
+      greeted = true;
+    }
+  });
+
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      const msg = input.value.trim();
+      if (!msg) return;
+      addMessage("You", msg, "user");
+      input.value = "";
+      showTyping(() => respond(msg.toLowerCase()));
+    }
+  });
+
+  function showTyping(callback) {
+    const typing = document.createElement("div");
+    typing.className = "typing";
+    typing.textContent = "Sarthi is typing...";
+    messagesBox.appendChild(typing);
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+
+    setTimeout(() => {
+      typing.remove();
+      callback();
+    }, 800);
+  }
+
+  function addMessage(sender, text, type) {
+    const bubble = document.createElement("div");
+    bubble.className = `chat-bubble ${type}`;
+    bubble.innerHTML = `<strong>${sender}:</strong><br>${text}`;
+    messagesBox.appendChild(bubble);
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+  }
+
+  function respond(input) {
+  let response = `I'm not sure how to help with that. Try asking about Palak’s projects or resume. If you would like to know anything else, please fill the form at the end of the <a href='https://palak-goyani.netlify.app/' target='_blank'>home page</a>.`;
+
+  input = input.toLowerCase();
+
+  if (input.includes("hello") || input.includes("hi") || input.includes("hey")) {
+    response = `Hi there! I'm Sarthi, Palak's Virtual Assitant. Ask me about something you would like to know about Palak.`;
+  } else if (input.includes("who") || input.includes("about")) {
+    response = `Palak is a Computer Science graduate with a First Class Honours Degree and a creative web developer passionate about technology, design, and learning new things.`;
+  } else if (input.includes("project")) {
+    response = `You can check out Palak’s projects on her <a href='https://palak-goyani.netlify.app/#container-3' target='_blank'>homepage</a> or her <a href='https://github.com/pro-palak' target='_blank'>GitHub</a>.`;
+  } else if (input.includes("resume") || input.includes("cv")) {
+    response = `Here's <a href='https://drive.google.com/file/d/1XEYc484bbtYQO0SlZMXc0UaLNC83n_Xn/view' target='_blank'>Palak’s resume</a> (PDF).`;
+  } else if (input.includes("contact")) {
+    response = `You can contact Palak at the bottom of her homepage or via email: <a href='mailto:palakgoyani@icloud.com'>palakgoyani@icloud.com</a>.`;
+  } else if (input.includes("skills") || input.includes("technologies")) {
+    response = `Palak has experience in JavaScript, React, Python, Git, and more!`;
+  } else if (input.includes("experience") || input.includes("job")) {
+    response = `Palak is currently working at All In The Loop as a Technology Executive. She previously worked at TAG - The Appointment Group and taught at Code Ninjas. See her full work history <a href='https://palak-goyani.netlify.app/career' target='_blank'>here</a>.`;
+  } else if (input.includes("hobbies") || input.includes("interests")) {
+    response = `Palak loves exploring the mysteries of the universe through learning about Astronomy, and she's passionate about Music 🎵, Reading 📚, and Writing ✍️.`;
+  } else if (input.includes("astronomy")) {
+    response = `Yes, Palak loves Astronomy! 🌌 One interesting fact: Did you know that if you could fold a piece of paper 42 times, it would reach the Moon? Mind-blowing, right?`;
+  } else if (input.includes("music")) {
+    response = `Palak enjoys all kinds of music, especially instrumental and lo-fi beats while working. 🎶 Fun fact: Listening to music while coding can improve focus for some people.`;
+  } else if (input.includes("reading")) {
+    response = `Palak’s favourite genres include self-help, productivity, and sci-fi. 📖`;
+  } else if (input.includes("writing")) {
+    response = `Palak enjoys journaling and poems. ✍️ Fun fact: Expressive writing is scientifically shown to reduce stress!`;
+  } else if (input.includes("sarthi")) {
+    response = `Hey! That's me, I'm Sarthi, Palak's digital companion. In Hindi, 'Sarthi' means a charioteer or guide. I’m here to help you learn about Palak.`;
+  } else if (input.includes("fun fact")) {
+    response = `Sure! Did you know Palak once built a task management app tailored for ADHD users as part of her final year university project? 🧠✨`;
+      } else if (input.includes("university")) {
+    response = `Palak studied Computer Science at the University of Hertfordshire and graduated with First Class Honours 🎓.`;
+  } else if (input.includes("where is palak from") || input.includes("which country")) {
+    response = `Palak is originally from India 🇮🇳 and moved to the UK for university studies!`;
+  } else if (input.includes("final year project") || input.includes("fyp")) {
+    response = `Palak's final year project was 'TaskAid' — a distraction-free online task manager for ADHD users 🧠✨.`;
+  } else if (input.includes("favorite language") || input.includes("favourite language")) {
+    response = `Palak loves JavaScript for front-end magic ✨ and Python for its simplicity and versatility!`;
+  } else if (input.includes("passion") || input.includes("inspire") || input.includes("about")) {
+    response = `Palak is passionate about technology, accessibility, creative design, and making tools that help people. She’s inspired by creators who build for social good 💡.`;
+  } else if (input.includes("social media")) {
+    response = `You can connect with Palak on <a href='https://www.linkedin.com/in/palakgoyani/' target='_blank'>LinkedIn</a> or check out her work on <a href='https://github.com/pro-palak' target='_blank'>GitHub</a>.`;
+  } else if (input.includes("quote")) {
+    response = `One of Palak’s favorite quotes: "Stay curious, stay humble." ✨`;
+  } else if (input.includes("unique") || input.includes("fun fact")) {
+    response = `Fun fact: Palak once built a productivity app designed specifically for ADHD users and got over 55 survey responses for it! 🧠📊`;
+  } else if (input.includes("palak meaning")) {
+    response = `The name 'Palak' means 'eyelash' in Hindi — poetic, right? 👁️✨`;
+  } else if (input.includes("coffee") || input.includes("tea")) {
+    response = `Palak loves tea and coffee 🍵, especially a classic masala chai or Chai Latte! ☕️✨`;
+  } else if (input.includes("star sign") || input.includes("zodiac")) {
+    response = `Palak is a Scorpio ♍️ — organized, thoughtful, and endlessly curious!`;
+  } else if (input.includes("favorite color") || input.includes("favourite colour")) {
+    response = `Palak’s favorite color is lavendar, calm, creative, and refreshing!`;
+  }
+
+  addMessage("Sarthi", response, "bot");
+}
+
+</script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="career.js"></script>

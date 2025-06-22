@@ -3,14 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Palak's Portfolio | Career Journey</title>
-
-    <link rel="icon" type="image/png" sizes="32x32" href="./Assets/Palak.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./Assets/Palak.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./Assets/Palak.png">
-    <link rel="shortcut icon" type="image/png" href="./Assets/Palak.png">
-
+    <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700" rel="stylesheet">
@@ -25,15 +18,10 @@
                     </a>
                 </h1>
             </div>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="hamburger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation">
                 <span class="sr-only">Menu</span>
             </button>
-            <ul class="primary-navigation" id="primary-navigation" data-visible="false">
+            <ul class="ul-0" id="primary-navigation">
                 <li class="li-0"><a class="a-0" href="#container-2">skills</a></li>
                 <li class="li-0"><a class="a-0" href="#container-3">projects</a></li>
                 <li class="li-0"><a class="a-0" href="#container-4">about</a></li>
@@ -158,27 +146,6 @@
                 </a>
             </li>
             <li>
-                <a class="gridCell" href="projects.html#track-my-job" data-project="track-my-job">
-                    <img class="gridImg" src="./Assets/TMJ.png" id="PMS">
-                    <span class="gridOverlay"></span>
-                    <span class="gridText">View Project</span>
-                </a>
-            </li>
-            <li>
-                <a class="gridCell" href="projects.html#Robocar" data-project="Robocar">
-                    <img class="gridImg" src="./Assets/Pogo.jpg" id="PMS">
-                    <span class="gridOverlay"></span>
-                    <span class="gridText">View Project</span>
-                </a>
-            </li>
-            <li>
-                <a class="gridCell" href="projects.html#ActivitySense" data-project="ActivitySense">
-                    <img class="gridImg" src="./Assets/AS.png" id="PMS">
-                    <span class="gridOverlay"></span>
-                    <span class="gridText">View Project</span>
-                </a>
-            </li>
-            <li>
                 <a class="gridCell" href="projects.html#weather-app" data-project="weather-app">
                     <img class="gridImg" src="./Assets/PMS.jpg" id="PMS">
                     <span class="gridOverlay"></span>
@@ -188,13 +155,6 @@
             <li>
                 <a class="gridCell" href="projects.html#registration-website" data-project="registration-website">
                     <img class="gridImg" src="./Assets/RegWeb.jpg" id="PMS">
-                    <span class="gridOverlay"></span>
-                    <span class="gridText">View Project</span>
-                </a>
-            </li>
-            <li>
-                <a class="gridCell" href="projects.html#BATHS" data-project="BATHS">
-                    <img class="gridImg" src="./Assets/BATHS.png" id="Port">
                     <span class="gridOverlay"></span>
                     <span class="gridText">View Project</span>
                 </a>
@@ -212,9 +172,9 @@
     <div id="container-4" class="row">
       <section class="about">
           <h3>THE AUTHOR</h3>
-          <p>I am a Computer Science student with a passion for designing impactful digital experiences. Whether it's coding a sleek, user-centered tool or crafting a visual masterpiece, I thrive in the intersection of creativity and technology. </p>
+          <p>I am a Computer Science graduate with a First Class Honours degree and passion for designing impactful digital experiences. Whether it's coding a sleek, user-centered tool or crafting a visual masterpiece, I thrive in the intersection of creativity and technology. </p>
 
-            <p> I’m not buried in lines of code or immersed in design challenges, you’ll likely find me exploring the latest in music, astrophysics, or F1 (because who doesn’t love speed and precision?).  I moved to the UK when I was 17, this step was one of the best decisions of my life taught me a lot about technology and life. I’ve been passionate about technology since forever and how it can be used to solve real-world problems.</p>
+            <p> I’m not buried in lines of code or immersed in design challenges, you’ll likely find me exploring the latest in music, astrophysics, or F1 (because who doesn’t love speed and precision?). I believe in blending functionality with creativity, and my journey through projects like TaskAid, event technology, and software architecture has been a testament to this.</p>
             
             <p>With a strong foundation in Java, CSS, HTML, and a keen interest in machine learning and sustainability, I’m on a mission to craft tech solutions that are not just smart but also accessible, meaningful, and built with purpose. Let’s create something that makes an impact big or small and pushes the boundaries of what’s possible.
             
@@ -226,6 +186,7 @@
                 <p class="contact-description">Have questions? I would love to hear from you.</p>
                 
                 <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    <input type="hidden" name="access_key" value="0baa74ff-b9d5-435d-a05f-f1d364ab4486">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -250,7 +211,134 @@
           <a href="https://www.linkedin.com/in/palak-goyani-803146222/" class="social-icon"> <i class="fa fa-linkedin"></i></a>
         <a href="https://github.com/pro-palak" class="social-icon"> <i class="fa fa-github"></i></a>
         </section>
-      
+
+<div id="chatbot-toggle">
+  <img src="Assets/Assistant.png" alt="Chat" />
+</div>
+
+<div id="chatbot-box">
+  <div id="chatbot-header">Ask me anything!</div>
+  <div id="chatbot-messages"></div>
+  <input type="text" id="chatbot-input" placeholder="Type a message..." />
+</div>
+
+
+<script>
+  const toggleBtn = document.getElementById("chatbot-toggle");
+  const chatbotBox = document.getElementById("chatbot-box");
+  const messagesBox = document.getElementById("chatbot-messages");
+  const input = document.getElementById("chatbot-input");
+
+  let greeted = false;
+
+  toggleBtn.addEventListener("click", () => {
+    const isVisible = chatbotBox.style.display === "flex";
+    chatbotBox.style.display = isVisible ? "none" : "flex";
+
+    if (!isVisible && !greeted) {
+      showTyping(() => {
+        addMessage("Sarthi", "Hi there! I'm Sarthi, which means 'companion' or 'guide' in Hindi. Ask me about Palak’s projects, hobbies, work, how to contact her, or anything else you'd like to know about her.", "bot");
+      });
+      greeted = true;
+    }
+  });
+
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      const msg = input.value.trim();
+      if (!msg) return;
+      addMessage("You", msg, "user");
+      input.value = "";
+      showTyping(() => respond(msg.toLowerCase()));
+    }
+  });
+
+  function showTyping(callback) {
+    const typing = document.createElement("div");
+    typing.className = "typing";
+    typing.textContent = "Sarthi is typing...";
+    messagesBox.appendChild(typing);
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+
+    setTimeout(() => {
+      typing.remove();
+      callback();
+    }, 800);
+  }
+
+  function addMessage(sender, text, type) {
+    const bubble = document.createElement("div");
+    bubble.className = `chat-bubble ${type}`;
+    bubble.innerHTML = `<strong>${sender}:</strong><br>${text}`;
+    messagesBox.appendChild(bubble);
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+  }
+
+  function respond(input) {
+  let response = `I'm not sure how to help with that. Try asking about Palak’s projects or resume. If you would like to know anything else, please fill the form at the end of the <a href='https://palak-goyani.netlify.app/' target='_blank'>home page</a>.`;
+
+  input = input.toLowerCase();
+
+  if (input.includes("hello") || input.includes("hi") || input.includes("hey")) {
+    response = `Hi there! I'm Sarthi, Palak's Virtual Assitant. Ask me about something you would like to know about Palak.`;
+  } else if (input.includes("who") || input.includes("about")) {
+    response = `Palak is a Computer Science graduate with a First Class Honours Degree and a creative web developer passionate about technology, design, and learning new things.`;
+  } else if (input.includes("project")) {
+    response = `You can check out Palak’s projects on her <a href='https://palak-goyani.netlify.app/#container-3' target='_blank'>homepage</a> or her <a href='https://github.com/pro-palak' target='_blank'>GitHub</a>.`;
+  } else if (input.includes("resume") || input.includes("cv")) {
+    response = `Here's <a href='https://drive.google.com/file/d/1XEYc484bbtYQO0SlZMXc0UaLNC83n_Xn/view' target='_blank'>Palak’s resume</a> (PDF).`;
+  } else if (input.includes("contact")) {
+    response = `You can contact Palak at the bottom of her homepage or via email: <a href='mailto:palakgoyani@icloud.com'>palakgoyani@icloud.com</a>.`;
+  } else if (input.includes("skills") || input.includes("technologies")) {
+    response = `Palak has experience in JavaScript, React, Python, Git, and more!`;
+  } else if (input.includes("experience") || input.includes("job")) {
+    response = `Palak is currently working at All In The Loop as a Technology Executive. She previously worked at TAG - The Appointment Group and taught at Code Ninjas. See her full work history <a href='https://palak-goyani.netlify.app/career' target='_blank'>here</a>.`;
+  } else if (input.includes("hobbies") || input.includes("interests")) {
+    response = `Palak loves exploring the mysteries of the universe through learning about Astronomy, and she's passionate about Music 🎵, Reading 📚, and Writing ✍️.`;
+  } else if (input.includes("astronomy")) {
+    response = `Yes, Palak loves Astronomy! 🌌 One interesting fact: Did you know that if you could fold a piece of paper 42 times, it would reach the Moon? Mind-blowing, right?`;
+  } else if (input.includes("music")) {
+    response = `Palak enjoys all kinds of music, especially instrumental and lo-fi beats while working. 🎶 Fun fact: Listening to music while coding can improve focus for some people.`;
+  } else if (input.includes("reading")) {
+    response = `Palak’s favourite genres include self-help, productivity, and sci-fi. 📖`;
+  } else if (input.includes("writing")) {
+    response = `Palak enjoys journaling and poems. ✍️ Fun fact: Expressive writing is scientifically shown to reduce stress!`;
+  } else if (input.includes("sarthi")) {
+    response = `Hey! That's me, I'm Sarthi, Palak's digital companion. In Hindi, 'Sarthi' means a charioteer or guide. I’m here to help you learn about Palak.`;
+  } else if (input.includes("fun fact")) {
+    response = `Sure! Did you know Palak once built a task management app tailored for ADHD users as part of her final year university project? 🧠✨`;
+      } else if (input.includes("university")) {
+    response = `Palak studied Computer Science at the University of Hertfordshire and graduated with First Class Honours 🎓.`;
+  } else if (input.includes("where is palak from") || input.includes("which country")) {
+    response = `Palak is originally from India 🇮🇳 and moved to the UK for university studies!`;
+  } else if (input.includes("final year project") || input.includes("fyp")) {
+    response = `Palak's final year project was 'TaskAid' — a distraction-free online task manager for ADHD users 🧠✨.`;
+  } else if (input.includes("favorite language") || input.includes("favourite language")) {
+    response = `Palak loves JavaScript for front-end magic ✨ and Python for its simplicity and versatility!`;
+  } else if (input.includes("passion") || input.includes("inspire") || input.includes("about")) {
+    response = `Palak is passionate about technology, accessibility, creative design, and making tools that help people. She’s inspired by creators who build for social good 💡.`;
+  } else if (input.includes("social media")) {
+    response = `You can connect with Palak on <a href='https://www.linkedin.com/in/palakgoyani/' target='_blank'>LinkedIn</a> or check out her work on <a href='https://github.com/pro-palak' target='_blank'>GitHub</a>.`;
+  } else if (input.includes("quote")) {
+    response = `One of Palak’s favorite quotes: "Stay curious, stay humble." ✨`;
+  } else if (input.includes("unique") || input.includes("fun fact")) {
+    response = `Fun fact: Palak once built a productivity app designed specifically for ADHD users and got over 55 survey responses for it! 🧠📊`;
+  } else if (input.includes("palak meaning")) {
+    response = `The name 'Palak' means 'eyelash' in Hindi — poetic, right? 👁️✨`;
+  } else if (input.includes("coffee") || input.includes("tea")) {
+    response = `Palak loves tea and coffee 🍵, especially a classic masala chai or Chai Latte! ☕️✨`;
+  } else if (input.includes("star sign") || input.includes("zodiac")) {
+    response = `Palak is a Scorpio ♍️ — organized, thoughtful, and endlessly curious!`;
+  } else if (input.includes("favorite color") || input.includes("favourite colour")) {
+    response = `Palak’s favorite color is lavendar, calm, creative, and refreshing!`;
+  }
+
+  addMessage("Sarthi", response, "bot");
+}
+
+</script>
+
+
   </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
