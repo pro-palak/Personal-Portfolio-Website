@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     // Project Details Modal
     const projectCards = document.querySelectorAll('.project-card');
@@ -9,16 +10,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (window.location.hash) {
-        // Get the element
+        
         const element = document.querySelector(window.location.hash);
         if (element) {
-            // Wait a brief moment for everything to load
+            
             setTimeout(() => {
                 element.scrollIntoView({ behavior: 'smooth' });
             }, 100);
         }
     }
     
+   
+
     // Modal Elements
     const modalTitle = document.getElementById('project-title');
     const modalImage = document.getElementById('project-main-image');
@@ -163,4 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'none';
         }
     });
+
+    
 });
+

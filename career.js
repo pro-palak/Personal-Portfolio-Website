@@ -11,6 +11,24 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.1
     });
 
+const navToggle = document.querySelector(".mobile-nav-toggle");
+  const nav = document.querySelector("#primary-navigation");
+
+  navToggle.addEventListener("click", () => {
+    const isVisible = nav.getAttribute("data-visible") === "true";
+    nav.setAttribute("data-visible", !isVisible);
+    navToggle.setAttribute("aria-expanded", !isVisible);
+  });
+
+  const navLinks = document.querySelectorAll(".ul-0 a");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    nav.setAttribute("data-visible", "false");
+    navToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
     // Observe all timeline items
     document.querySelectorAll('.timeline-item').forEach(item => {
         observer.observe(item);

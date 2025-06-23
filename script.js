@@ -76,6 +76,15 @@ $('a[href^="#container-4"]').on('click',function (e) {
     navToggle.setAttribute("aria-expanded", !isVisible);
   });
 
+  const navLinks = document.querySelectorAll(".ul-0 a");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    nav.setAttribute("data-visible", "false");
+    navToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Project Data - Update with your actual project details
