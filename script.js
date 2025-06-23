@@ -67,6 +67,16 @@ $('a[href^="#container-4"]').on('click',function (e) {
   
 });
 
+  const navToggle = document.querySelector(".mobile-nav-toggle");
+  const nav = document.querySelector("#primary-navigation");
+
+  navToggle.addEventListener("click", () => {
+    const isVisible = nav.getAttribute("data-visible") === "true";
+    nav.setAttribute("data-visible", !isVisible);
+    navToggle.setAttribute("aria-expanded", !isVisible);
+  });
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Project Data - Update with your actual project details
     const projectData = {

@@ -88,30 +88,45 @@ nav {
 }
 
 @media (max-width: 768px) {
-    .mobile-nav-toggle {
-        display: block;
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-        z-index: 100;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-    }
+    @media (max-width: 768px) {
+  .mobile-nav-toggle {
+      display: block;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      z-index: 100;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 2.5rem;
+      color: white;
+  }
 
+  .mobile-nav-toggle i {
+      color: white;
+      font-size: 2.5rem;
+  }
+}
     .ul-0 {
-        display: none;
-        position: fixed;
-        inset: 0 0 0 30%;
-        background: rgba(21, 21, 21, 0.95);
-        padding: min(30vh, 10rem) 2em;
-        flex-direction: column;
-        gap: 2em;
-    }
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(21, 21, 21, 0.95);
+    padding: min(30vh, 10rem) 2em;
+    flex-direction: column;
+    gap: 2em;
+    z-index: 99;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+}
 
-    .ul-0[data-visible="true"] {
-        display: flex;
-    }
+.ul-0[data-visible="true"] {
+    transform: translateX(0);
+}
+
 
     .li-0 {
         margin: 0;
